@@ -77,6 +77,11 @@ public:
    */
     explicit PrivateKeyImpl(CryptoContext<Element> cc = 0) : Key<Element>(cc, GenerateUniqueKeyID()) {}
 
+/**
+   * Construct in context
+   */
+    explicit PrivateKeyImpl(std::string id, CryptoContext<Element> cc = 0) : Key<Element>(cc, id) {}
+
     /**
    * Copy constructor
    *@param &rhs the PrivateKeyImpl to copy from
